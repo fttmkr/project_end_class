@@ -7,7 +7,7 @@ from .forms import UserRegisterForm,UserLoginForm
 from django.contrib.auth.models import User
 # Create your views here.
 def contactus_func (request):
-    return render(request,'contactus_module/contactus_module.html')
+    return render(request, 'contactus_module/contactus_page.html')
 def user_register(request):
     if request.method=='Post':
         form_register=UserRegisterForm(request.POST)
@@ -19,7 +19,7 @@ def user_register(request):
                                      last_name=data['lastname'],
                                      password=data['password2'],
                                      )
-            return redirect('home-module:home_module')
+            return redirect('home-module:home')
 
     else:
         form_register=UserRegisterForm()
@@ -39,10 +39,10 @@ def user_login(request):
                                     password=data['password'])
             if user is not None:
                 login(request,user)
-                return redirect('home-module:home_module')
+                return redirect('home-module:home')
     else:
         form_login=UserLoginForm()
     return render(request,'contactus_module/login.html',{'form_login':form_login})
 def user_logout(request):
     logout(request)
-    return  redirect('home-module:home_module')
+    return  redirect('home-module:home')

@@ -13,7 +13,7 @@ all_posts = [
         'slug': 'Python-Programming',
         'title': 'Python.py',
         'author': 'karimi',
-        'image': 'img.png',
+        'image': 'R.jpg',
         'date': date(2019, 3, 3),
         'short_description': 'Python is a Programming Language',
         'content': """What is Python?
@@ -29,7 +29,7 @@ all_posts = [
         'slug': 'CSharp',
         'title': 'C#',
         'author': 'karimi',
-        'image': 'download.jpg',
+        'image': 'OIP.jpg',
         'date': date.today(),
         'short_description': 'CSharp is a Programming Language',
         'content': """What is C# and what is it used for?
